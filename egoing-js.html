@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <h1>Array & Loop</h1>
+    <p>coworkers</p>
+    <ul>
+        <script>
+            let coworkers = ['park', 'kim', 'Lee', 'Sang'];
+            let i = 0;
+            while(i < coworkers.length){
+                document.write('<li><a href="http://a.com/'+coworkers[i]+'">' +coworkers[i]+'</a></li>');
+                i = i + 1;
+            }
+        </script>
+    </ul>  
+    <input type="button" value="night" onclick="
+        let target =  document.querySelector('body');
+        if(this.value === 'night') {
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            this.value = 'day';
+
+            let links = document.querySelectorAll('a');
+            let num = 0;
+            while(num < links.length){
+            console.log(links[num]);
+                links[num].style.color = 'lightblue';
+               num = num + 1;
+            }
+        } else {       
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            this.value = 'night';
+
+            let links = document.querySelectorAll('a');
+            let num = 0;
+            while(num < links.length){
+            console.log(links[num]);
+                links[num].style.color = 'blue';
+               num = num + 1;
+            }
+        }
+    ">
+    
+
+</body>
+</html>

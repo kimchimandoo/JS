@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function LinksSetColor(color){
+            let links = document.querySelectorAll('a');
+            let num = 0;
+            while(num < links.length){
+            console.log(links[num]);
+                links[num].style.color = color;
+            num = num + 1;
+            }
+        }
+
+        function BodySetColor(color) {
+            document.querySelector('body').style.color = color;
+        }
+
+        function BodySetBackgroundColor(color) {
+            document.querySelector('body').style.backgroundColor = color;
+        }
+
+        function nightDayHandler(handler){
+            let target =  document.querySelector('body');
+            if(handler.value === 'night') {
+                Body.setBackgroundColor('black');
+                Body.setColor('white');
+                handler.value = 'day';
+
+                Links.setColor('lightblue');
+
+            } else {       
+                Body.setBackgroundColor('white');
+                Body.setColor('black');
+                handler.value = 'night';
+
+                Links.setColor('blue');
+            }
+        }
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object</h1>
+    <ul>
+        <script>
+            let coworkers = ['park', 'kim', 'Lee', 'Sang'];
+            let i = 0;
+            while(i < coworkers.length){
+                document.write('<li><a href="http://a.com/'+coworkers[i]+'">' +coworkers[i]+'</a></li>');
+                i = i + 1;
+            }
+        </script>
+    </ul>  
+    <input type="button" value="night" onclick="
+    nightDayHandler(this);      
+    ">
+</body>
+</html>

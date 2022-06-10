@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object</h1>
+    <script>
+        let coworkers = {
+            "programmer":"Hanna",
+            "designer":"Mina"
+        };
+        document.write("programmer : " + coworkers.programmer + "<br>");
+        document.write("designer : " + coworkers.designer + "<br>");
+        // Add 
+        coworkers.bookkeeper = "Jane";
+        console.log(coworkers);
+        coworkers["data scientist"] = "Tom";
+        console.log(coworkers);
+    </script>
+
+    <h1>Object Iteration</h1>
+    <script>
+        for(const key in coworkers) {
+            document.write(`${key} : ${coworkers[key]}<br> `);
+        }
+        for (const property in object) {
+            console.log(`${property}: ${object[property]}`);
+        }
+    </script>
+    
+</body>
+</html>
