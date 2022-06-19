@@ -4,6 +4,7 @@
 // Nearly all objects in Javascript are instances of Object
 // object = { key : value };
 
+// 1.  Literals properties
 const obj1 = {} // 'object literal' syntax
 const obj2 = new Object()  // 'object constructor' syntax
 
@@ -25,7 +26,7 @@ delete hanna.hasJob;
 console.log(hanna.hasJob);
 
 // 2. Computed properties
-// key should be always string
+// key (properties) should be always string
 console.log(hanna.myName);
 console.log(hanna['myName']);
 
@@ -57,7 +58,7 @@ const man4 = new Person('Man', 28);
 console.log(man4);
 
 function Person(myName, age) {
-    // this = {}
+    // this = {}  this is object!!
    this.myName = myName;
    this.age = age;
    // return this;
@@ -69,7 +70,7 @@ console.log('myName' in hanna);
 console.log('random' in hanna);
 console.log(hanna.random);
 
-// 2. for..in vs for..of
+// for..in vs for..of
 //  for (key in obj)
 console.clear();
 for (key in hanna) {

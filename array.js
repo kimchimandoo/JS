@@ -27,7 +27,7 @@ for (let fruit of fruits) {
 
 // c.forEach
 fruits.forEach(function (fruit, index){ 
-    console.log(fruit, index);
+    console.log('forEach: ', fruit, index);
 }); 
   //shorten version, above anonymous function can be changed to arrow function
 fruits.forEach((fruit, index) => console.log(fruit, index));
@@ -65,17 +65,15 @@ console.log(combineFruits);
 
 // 5. Searching
 // indexof: find the index
-console.clear();
 console.log(fruits);
-console.log(fruits.indexOf('apple'));
-console.log(fruits.indexOf('peach'))
+console.log('indexOf', fruits.indexOf('apple'));
+console.log('indexOf', fruits.indexOf('peach'))
 
 // includes: true/false
 console.log(fruits.includes('watermelon'));
 console.log(fruits.includes('onions'));
 
 // lastIndexOf
-console.clear();
 fruits.push('apple');
 console.log(fruits);
 console.log(fruits.indexOf('apple'));

@@ -89,7 +89,7 @@ class Triangle extends Shape {
 
 const rectangleBlue = new Rectangle(20, 20, 'blue');
 rectangleBlue.draw();
-console.log(rectangleBlue.getArea());
+console.log('rectangleBlue.getArea(): ', rectangleBlue.getArea());
 const triangleRed = new Triangle(20, 20, 'red');
 triangleRed.draw();
 console.log(triangleRed.getArea());
@@ -124,4 +124,4 @@ function calculate(command, a, b) {
     }
 }
 
-console.log(calculate('add', 1, 3));
+console.log('caculate resurtt is: ', calculate('subtract', 8, 3));
