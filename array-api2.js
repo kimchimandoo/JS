@@ -1,6 +1,6 @@
 // Q1. make a string out of an array
 {
-    const fruits = ['apple', 'banana', 'orange'];
+    const fruits = ['apple', 'banana', 'orange', 'watermelon'];
     
     const result = fruits.join(',');
     console.log ('Q1: ', result);
@@ -8,8 +8,8 @@
   
   // Q2. make an array out of a string
   {
-    const fruits = '🍎, 🥝, 🍌, 🍒';
-    const result2 = fruits.split('', 2);
+    const fruits = 'How are you';
+    const result2 = fruits.split("");
     console.log('Q2: ',result2);
   }
   
@@ -24,7 +24,7 @@
   // Q4. make new array without the first two elements
   {
     const array = [1, 2, 3, 4, 5];
-    const result4 = array.slice(2, array.length);
+    const result4 = array.slice(2);
     console.log('Q4: ', result4);
     console.log(array);
   }
@@ -85,14 +85,31 @@
   
   // Q9. compute students' average score
   {
+    const result = students.reduce((pre, curr) => {
+      console.log(pre);
+      console.log(curr);
+      return pre + curr.score;
+    }, 0);
+   
+    console.log('Q9: ', result / students.length);
   }
   
   // Q10. make a string containing all the scores
   // result should be: '45, 80, 90, 66, 88'
   {
+    const result = students.map((student) => {
+      return student.score
+    });
+    console.log('Q10, map: ', result);
+    const result3 = students.filter((student) => student.score >= 80);
+    console.log('Q10, filter: ', result3); 
+    const result2 = result.join();
+    console.log('Q10, join: ', result2);    
   }
   
   // Bonus! do Q10 sorted in ascending order
   // result should be: '45, 66, 80, 88, 90'
   {
+    const answer = students.map((student) => student.score).sort((a, b) => a - b).join();
+    console.log('Bonus: ', answer);
   }

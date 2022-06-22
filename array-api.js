@@ -82,15 +82,20 @@ console.log(result);
   
   // Q9. compute students' average score
   {
-      const result = students.reduce((prev, curr) => {
-          console.log(prev);
-      });
+    const result = students.reduce((pre, curr) => {
+      console.log(pre);
+      console.log(curr);
+      return pre + curr.score;
+    }, 0);
+   
+    console.log('Q9: ', result / students.length);
   }
 
   
   // Q10. make a string containing all the scores
   // result should be: '45, 80, 90, 66, 88'
   {
+    const result = students.
   }
   
   // Bonus! do Q10 sorted in ascending order
