@@ -42,3 +42,32 @@ fetchNumber
    });
 })
 .then(num => console.log(num));
+
+
+// Error Handling
+const getHen = () => 
+    new Promise((resolve, reject) => {
+        setTimeout(() => resolve('Hen'), 1500);
+    });
+ 
+const getEgg = (hen) => 
+    new Promise((resolve, reject) => {
+        setTimeout(() => resolve(`${hen} -> egg`), 1000);
+    });
+
+const cook = (egg) =>
+    new Promise((resolve, reject) => {
+        setTimeout(() => resolve(`${egg} -> cooked egg`), 1000);
+    });
+
+getHen()
+.then(hen => getEgg(hen))
+.then(egg => cook(egg))
+.then(meal => console.log(meal));
+
+// same as this
+getHen()
+.then(getEgg)
+.then(cook)
+.then(console.log)
+.catch(console.log)

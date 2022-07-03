@@ -1,4 +1,11 @@
+// Reasons to add 'use strict':
+// 1. Whole-script script mode syntax
+// 2. Javascript is very flexible
+// 3. flexible === dangerous
+// 4. It is added in ECMAScript 5
 'use strict';
+
+
 // primitive- number, string, boolean, null, underfined
 // object- key:value
 let obj = {
